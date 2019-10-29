@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This repository is set up for the computational nanoscience course by Paddy Royall. [Fergus](https://github.com/FJMOORE) and [Yushi](https://github.com/yangyushi) wrote some basic Monte-Carlo simulations code mentioned in the course.
+This repository is set up for the computational nanoscience course by Paddy Royall. Fergus and Yushi wrote some basic Monte-Carlo simulations code mentioned in the course.
 
-The code is written in a way that anyone without prior programming experiences could ~~easily~~ understand it. We deliberately avoided any [advanced python features](https://docs.python.org/3/tutorial/classes.html) and [libraries](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html). If you are looking for good and pythonic code, please take a look at the [Josh's repository](https://github.com/tranqui/monte_carlo), which performs the same Monte-Carlo simulation.
+The code is written in a way that anyone without prior programming experiences could ~~easily~~ understand it. We deliberately avoided any [advanced python features](https://docs.python.org/3/tutorial/classes.html) and [libraries](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html). If you are looking for good and pythonic code, please take a look at [Josh's repository](https://github.com/tranqui/monte_carlo), which performs the same Monte-Carlo simulation.
 
 ## What to Do
 
