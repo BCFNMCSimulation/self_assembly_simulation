@@ -19,7 +19,7 @@ def check_overlap(p1, p2, diameter, box):
     ┌ ─ ─ ─ ─ ─ ─┌────────────┐
          p3  ◌   │○ p1    ○ p2│
     └ ─ ─ ─ ─│─ ─└┬───────┬───┘
-             │ d1 │  d0   │    
+             │ d1 │  d0   │
 
     Figure 1. Example of PBC in 1D
 
@@ -136,3 +136,4 @@ for t in range(0, total_steps):
         if not is_overlap:
             # Confirm movements
             x[i], y[i], z[i] = trial_x, trial_y, trial_z
+print("Simualtion box size is ", box)
