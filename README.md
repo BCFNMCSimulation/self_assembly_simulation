@@ -32,16 +32,7 @@ for i in range(0, unit_repeat):
 
 ## What is ideal gas
 
-Essentally you want to generate a lattice (many ordered xyz coordinates), and randomly move them. Being "ideal" means gas molecules **would not** interact with each other and they can overlap. For instance we do something like this
-
-```
-for frame_number in range(100):
-    for particle_id in range(particle_number):
-        x[particle_id] += random_move_x
-        y[particle_id] += random_move_y
-        z[particle_id] += random_move_z
-    #output_frame
-```
+Essentally you want to generate a lattice (many ordered xyz coordinates), and randomly move them. Being "ideal" means gas molecules **would not** interact with each other and they can overlap. 
 
 ## Random Movements
 
@@ -57,7 +48,16 @@ random_move_z = random.uniform(0, 1)
 
 ## Getting a movie
 
-You are expected to generate a movie. Which means move **every paritcle randomly** each time. And output a **frame** after all particles were moved.
+You are expected to generate a movie. Which means move **every paritcle randomly** each time. And output a **frame** after all particles were moved. For instance we do something like this
+
+```
+for frame_number in range(100):
+    for particle_id in range(particle_number):
+        x[particle_id] += random_move_x
+        y[particle_id] += random_move_y
+        z[particle_id] += random_move_z
+    #output_frame
+```
 
 ## Output a frame `.xyz` file
 
