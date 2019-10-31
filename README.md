@@ -50,10 +50,10 @@ PBC also affects the **distance** between two coordinates. If distance between `
 ```
 distance_nd = []
 for dimension in range(3):
-  distance_1d = abs(p2[dimension] - p1[dimension])  # p1 and p2 are xyz coordinates two particles
-  if distance_1d > (box[dimension] / 2):
-      distance_1d = box[dimension]
-  distance_nd.append(distance_1d)
+    distance_1d = abs(p2[dimension] - p1[dimension])  # p1 and p2 are xyz coordinates two particles
+    if distance_1d > (box[dimension] / 2):
+        distance_1d = box[dimension] - distance_1d
+    distance_nd.append(distance_1d)
  
 distance = 0
 for dimension in range(3):
