@@ -31,6 +31,19 @@ y = random.uniform(0, 10)
 z = random.uniform(0, 10)
 ```
 
+## Generating Lattice
+
+(:shushing_face:)
+
+```
+unit_repeat = 5
+x, y, z = [], [], []
+for i in range(0, unit_repeat):
+    for j in range(0, unit_repeat):
+        for k in range(0, unit_repeat):
+            # Learning
+```
+
 ## Getting a movie
 
 You are expected to generate a movie. Which means move **every paritcle randomly** each time. And output a **frame** after all particles were moved.
