@@ -28,9 +28,9 @@ You can use the `random` library comes with python to get random numbers, like t
 ```
 import random
 
-random_move_x = random.uniform(0, 10)  # generate a random number from 0 to 10
-random_move_y = random.uniform(0, 10)
-random_move_z = random.uniform(0, 10)
+random_move_x = random.uniform(0, 1)  # generate a random number from 0 to 10
+random_move_y = random.uniform(0, 1)
+random_move_z = random.uniform(0, 1)
 ```
 
 ## Generating Lattice
