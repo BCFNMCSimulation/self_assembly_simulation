@@ -31,6 +31,26 @@ y = random.uniform(0, 10)
 z = random.uniform(0, 10)
 ```
 
+## Getting a movie
+
+You are expected to generate a movie. Which means move **every paritcle randomly** each time. And output a **frame** after all particles were moved.
+
+## Output a frame `.xyz` file
+
+There are the code for output a `xyz` file. Incorporate it in your `for` loop.
+
+```
+  with open('filename.xyz', 'a') as f:
+      f.write(str(len(x)) + '\n')
+      f.write('\n')
+      for i in range(len(x)):
+          # xyz file is a file format to store 3D position
+          # the general format is:
+          # PARTICLE_TYPE  X  Y  Z
+          # here we just call our random gas particles "G"
+          f.write('G' + '\t' + str(x[i]) + '\t' + str(y[i]) + '\t' + str(z[i]) + '\n')
+```
+
 ## What is Periodic boudnary condition
 
 The particles (xyz coordinates) we generated are assumend to be in a **box**. If a particle moves out of the box from left side, it comes back from the right side.
