@@ -4,11 +4,11 @@
 
 This repository is set up for the computational nanoscience course by Paddy Royall. Fergus and Yushi wrote some basic Monte-Carlo simulations code mentioned in the course.
 
-The code is written in a way that anyone without prior programming experiences could ~~easily~~ understand it. We deliberately avoided any [advanced python features](https://docs.python.org/3/tutorial/classes.html) and [libraries](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html). If you are looking for good and pythonic code, please take a look at [Josh's repository](https://github.com/tranqui/monte_carlo), which performs the same Monte-Carlo simulation.
+The code is written in a way that anyone without prior programming experiences could ~~easily~~ understand it. We deliberately avoided any [advanced python feature](https://docs.python.org/3/tutorial/classes.html) and [libraries](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html). If you are looking for good and pythonic code, please take a look at [Josh's repository](https://github.com/tranqui/monte_carlo), which performs the same Monte-Carlo simulation.
 
 ## What to Do
 
-There are four steps towards a successful Monte-Carlo simulation  of hard spheres.
+There are four steps towards a successful Monte-Carlo simulation of hard spheres.
 
 1. Simulating a ideal gas with the periodic boundary condition (PBC).
 2. Simulating hard spheres with PBC.
@@ -48,9 +48,16 @@ if x < box_left_x:
 PBC also affects the **distance** between two coordinates. If distance between `A` and `B` are greater than half of the box, the actual distance is `box_size - distance`. So you would write something like this
 
 ```
-distance_A_B_X = abs(A_X - B_X)
-if distance_A_B_X > box_size / 2:
-  distance_A_B_X = box_size - distance_A_B_X
+distance_nd = []
+for dimension in range(3):
+  distance_1d = abs(p2[dimension] - p1[dimension])  # p1 and p2 are xyz coordinates two particles
+  if distance_1d > (box[dimension] / 2):
+      distance_1d = box[dimension]
+  distance_nd.append(distance_1d)
+ 
+distance = 0
+for dimension in range(3):
+    distance = distance + distance_nd[dimension] ** 2
 ```
 
 ## What is hard sphere
