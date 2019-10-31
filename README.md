@@ -21,14 +21,16 @@ You are expected to write you own code in the class, and we will upload our vers
 
 Essentally you want to randomly generate many (x, y, z) coordinates. Being "ideal" means gas molecules **would not** interact with each other and they can overlap.
 
+## Random Movements
+
 You can use the `random` library comes with python to get random numbers, like this
 
 ```
 import random
 
-x = random.uniform(0, 10)  # generate a random number from 0 to 10
-y = random.uniform(0, 10)
-z = random.uniform(0, 10)
+random_move_x = random.uniform(0, 10)  # generate a random number from 0 to 10
+random_move_y = random.uniform(0, 10)
+random_move_z = random.uniform(0, 10)
 ```
 
 ## Generating Lattice
