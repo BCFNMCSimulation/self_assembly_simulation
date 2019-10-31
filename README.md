@@ -17,6 +17,19 @@ There are four steps towards a successful Monte-Carlo simulation of hard spheres
 
 You are expected to write you own code in the class, and we will upload our version to this repository after each course as a reference.
 
+## Generating Lattice
+
+(:shushing_face:)
+
+```
+unit_repeat = 5
+x, y, z = [], [], []
+for i in range(0, unit_repeat):
+    for j in range(0, unit_repeat):
+        for k in range(0, unit_repeat):
+            # Learning
+```
+
 ## What is ideal gas
 
 Essentally you want to generate a lattice (many ordered xyz coordinates), and randomly move them. Being "ideal" means gas molecules **would not** interact with each other and they can overlap.
@@ -31,19 +44,6 @@ import random
 random_move_x = random.uniform(0, 1)  # generate a random number from 0 to 10
 random_move_y = random.uniform(0, 1)
 random_move_z = random.uniform(0, 1)
-```
-
-## Generating Lattice
-
-(:shushing_face:)
-
-```
-unit_repeat = 5
-x, y, z = [], [], []
-for i in range(0, unit_repeat):
-    for j in range(0, unit_repeat):
-        for k in range(0, unit_repeat):
-            # Learning
 ```
 
 ## Getting a movie
