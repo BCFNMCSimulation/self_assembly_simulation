@@ -41,9 +41,9 @@ You can use the `random` library comes with python to get random numbers, like t
 ```
 import random
 
-random_move_x = random.uniform(0, 1)  # generate a random number from 0 to 1
-random_move_y = random.uniform(0, 1)
-random_move_z = random.uniform(0, 1)
+random_move_x = random.uniform(-1, 1)  # generate a random number from -1 to 1
+random_move_y = random.uniform(-1, 1)
+random_move_z = random.uniform(-1, 1)
 ```
 
 ## Getting a movie
