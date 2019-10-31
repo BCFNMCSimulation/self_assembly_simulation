@@ -61,7 +61,7 @@ for frame_number in range(100):
 
 ### Output a frame `.xyz` file
 
-There are the code for output a `xyz` file. Incorporate it in your `for` loop.
+This is the piece of code for outputting an `xyz` file. Incorporate it in your `for frame_number ... ` loop.
 
 ```
 with open('filename.xyz', 'a') as f:
