@@ -23,9 +23,7 @@ You are expected to write you own code in the class, and we will upload our vers
 
 Essentally you want to generate a lattice (many ordered xyz coordinates), and randomly move them. Being "ideal" means gas molecules **would not** interact with each other and they can overlap. 
 
-### Generating Lattice
-
-(:shushing_face:)
+### Generating Lattice :wink:
 
 ```
 unit_repeat = 5
