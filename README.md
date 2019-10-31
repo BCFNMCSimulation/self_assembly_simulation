@@ -19,7 +19,7 @@ You are expected to write you own code in the class, and we will upload our vers
 
 ## What is ideal gas
 
-Essentally you want to randomly generate many (x, y, z) coordinates. Being "ideal" means gas molecules **would not** interact with each other and they can overlap.
+Essentally you want to generate a lattice (many ordered xyz coordinates), and randomly move them. Being "ideal" means gas molecules **would not** interact with each other and they can overlap.
 
 ## Random Movements
 
