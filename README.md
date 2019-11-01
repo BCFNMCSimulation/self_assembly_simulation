@@ -11,7 +11,7 @@ The code is written in a way that anyone without prior programming experiences c
 There are four steps towards a successful Monte-Carlo simulation of hard spheres.
 
 1. Simulating a ideal gas with the periodic boundary condition (PBC). [Example Code](ideal_gas.py)
-2. Simulating hard spheres with PBC.
+2. Simulating hard spheres with PBC. [Example Code](hard_sphere.py)
 3. Simulating attracting hard spheres with PBC.
 4. Change the parameters and observe different behaviours.
 
