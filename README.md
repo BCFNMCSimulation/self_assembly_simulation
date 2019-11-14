@@ -158,3 +158,22 @@ To do this, follow the following procedures:
 3. Click `Add modification` and add `Analysis/Coordination analysis`.
 
 Then you got your g(r)!
+
+## Attractive Hard Sphere
+
+### What is it
+
+Now it is time to add **attraction** to the hard sphere. For the attraction, we will implement a [square well potential](https://www.researchgate.net/figure/The-square-well-potential-of-depth-un-uand-A-are-respectively-the-hard-sphere-diameter_fig1_253989608).
+
+What we actuall do, is **lower the energy of the system** everytime if a particle goes into the attractive "well" in the potential. Very frankly, you are expected to do something like this
+
+```
+    energy = 0
+    p1 = system[i]   # particle 1
+    for j, p2 in enumerate(system):    # another particle
+        if i != j:
+            distance = get_distance_in_pbc(p1, p2, box)
+            if distance <= width + diameter:
+                energy = energy + depth
+    return energy
+```
