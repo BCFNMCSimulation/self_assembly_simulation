@@ -168,6 +168,16 @@ Now it is time to add **attraction** to the hard sphere. For the attraction, we 
 What we actuall do, is **lower the energy of the system** everytime if a particle goes into the attractive "well" in the potential. Very frankly, you are expected to do something like this
 
 ```
+def get_energy(i, system, depth, width, diameter, box):
+    """
+    this function calculating the energy of one particle inside a system
+    with square well potential
+
+    The stuff below are some testing code, don't worry about it
+    >>> system = [[0, 0], [1, 1], [2, 2], [3, 3]]
+    >>> get_energy_square_well(system[0], system, -1, 2, [4, 4])
+    -2
+    """
     energy = 0
     p1 = system[i]   # particle 1
     for j, p2 in enumerate(system):    # another particle
