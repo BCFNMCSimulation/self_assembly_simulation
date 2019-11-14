@@ -177,3 +177,18 @@ What we actuall do, is **lower the energy of the system** everytime if a particl
                 energy = energy + depth
     return energy
 ```
+
+### Accepting movement with energy
+
+Typicall I will do something like this
+
+```
+old_energy = get_energy(i, old_system, depth, width, diameter, box)
+new_energy = get_energy(i, new_system, depth, width, diameter, box)
+delta = new_energy - old_energy
+accept_probability = np.exp(-1 * delta)
+
+# if probability is HIGH, a random number is less likely to be higher than it
+if random.random() < accept_probability:
+    x[i], y[i], z[i] = trial_x, trial_y, trial_z
+```
