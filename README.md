@@ -11,7 +11,7 @@ The code is written in a way that anyone without prior programming experiences c
 There are four steps towards a successful Monte-Carlo simulation of hard spheres.
 
 1. Simulating a ideal gas with the periodic boundary condition (PBC). [Example Code](ideal_gas.py)
-2. Simulating hard spheres with PBC.
+2. Simulating hard spheres with PBC. [Example Code](hard_sphere.py)
 3. Simulating attracting hard spheres with PBC.
 4. Change the parameters and observe different behaviours.
 
@@ -158,3 +158,47 @@ To do this, follow the following procedures:
 3. Click `Add modification` and add `Analysis/Coordination analysis`.
 
 Then you got your g(r)!
+
+## Attractive Hard Sphere
+
+### What is it
+
+Now it is time to add **attraction** to the hard sphere. For the attraction, we will implement a [square well potential](https://www.researchgate.net/figure/The-square-well-potential-of-depth-un-uand-A-are-respectively-the-hard-sphere-diameter_fig1_253989608).
+
+What we actuall do, is **lower the energy of the system** everytime if a particle goes into the attractive "well" in the potential. Very frankly, you are expected to do something like this
+
+```
+def get_energy(i, system, depth, width, diameter, box):
+    """
+    this function calculating the energy of one particle inside a system
+    with square well potential
+
+    The stuff below are some testing code, don't worry about it
+    >>> system = [[0, 0], [1, 1], [2, 2], [3, 3]]
+    >>> get_energy_square_well(system[0], system, -1, 2, [4, 4])
+    -2
+    """
+    energy = 0
+    p1 = system[i]   # particle 1
+    for j, p2 in enumerate(system):    # another particle
+        if i != j:
+            distance = get_distance_in_pbc(p1, p2, box)
+            if distance <= width + diameter:
+                energy = energy + depth
+    return energy
+```
+
+### Accepting movement with energy
+
+Typicall I will do something like this
+
+```
+old_energy = get_energy(i, old_system, depth, width, diameter, box)
+new_energy = get_energy(i, new_system, depth, width, diameter, box)
+delta = new_energy - old_energy
+accept_probability = np.exp(-1 * delta)
+
+# if probability is HIGH, a random number is less likely to be higher than it
+if random.random() < accept_probability:
+    x[i], y[i], z[i] = trial_x, trial_y, trial_z
+```
